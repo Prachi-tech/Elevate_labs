@@ -111,5 +111,45 @@ To implement a binary classifier using Logistic Regression on the Breast Cancer 
 ✅ **Output**  
 Accurate logistic regression model with ~96% accuracy and ROC-AUC of 1.00, ready for deployment or further analysis.
 
+--------------------------------------------------------------------------------------
+
+Task 5: Decision Trees and Random Forests
+
+🎯 Objective
+To apply tree-based models (Decision Tree and Random Forest) for classification using the Heart Disease dataset.
+
+🛠️ Tools & Libraries Used
+
+Python
+
+Pandas
+Scikit-learn
+Graphviz
+Matplotlib
+Seaborn
+
+📊 Key Steps Performed
+
+Loaded and explored the heart.csv dataset
+Trained a Decision Tree Classifier and visualized the tree
+Controlled tree depth to prevent overfitting
+Trained a Random Forest Classifier and compared performance
+Interpreted feature importances and plotted using Seaborn
+Evaluated model using 5-fold cross-validation
+
+📁 Files Included
+
+task5_ML_internship.ipynb – Jupyter notebook with all code and visualizations
+heart.csv – Dataset used for training and testing
+README.md – This file
+
+✅ Output
+
+Pruned Decision Tree Accuracy: 0.80
+Random Forest Accuracy: 0.985
+Cross-validation Mean Accuracy: ~99.7%
+Random Forest model performed with excellent accuracy and generalization
+Feature importance helped identify key predictors of heart disease
+
 ## 🔗 Author:
 [Prachi] – B.Tech (IT) | ML Learner |
