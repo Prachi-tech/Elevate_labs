@@ -1,0 +1,75 @@
+# 🧠 Task 7 - Breast Cancer Classification using SVM
+
+This project focuses on classifying breast cancer tumors as **malignant (M)** or **benign (B)** using the **Support Vector Machine (SVM)** algorithm. The dataset used is the **Breast Cancer Wisconsin Diagnostic Dataset**.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+## 📁 Dataset
+
+- Source: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29)
+- Total Records: 569
+- Features: 30 real-valued input features (e.g., radius, texture, perimeter, area)
+- Target: Diagnosis (`M` = malignant, `B` = benign)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+## ✅ Workflow Summary
+
+1. **Data Preprocessing**
+   - Loaded the dataset using `pandas`
+   - Dropped unnecessary columns like `id`
+   - Encoded the `diagnosis` column: M → 1, B → 0
+   - Split the dataset into training and test sets
+   - Scaled features using `StandardScaler`
+
+2. **Model Building**
+   - Trained **Linear SVM** and **RBF Kernel SVM** using `sklearn.svm.SVC`
+   - Evaluated models using:
+     - Accuracy
+     - Precision, Recall, F1-Score (via `classification_report`)
+     - 5-fold Cross Validation
+
+3. **Hyperparameter Tuning**
+   - Performed **GridSearchCV** to find the best combination of:
+     - `C`: [0.1, 1, 10]
+     - `gamma`: ['scale', 0.01, 0.001]
+     - `kernel`: ['rbf']
+
+4. **Dimensionality Reduction and Visualization**
+   - Applied **PCA** (2 components) for 2D visualization
+   - Plotted SVM **decision boundary** using `matplotlib`
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+## 📊 Results
+
+- **Best model:** RBF Kernel SVM with `C=1`, `gamma='scale'`
+- **Test Accuracy:** ~98%
+- **Cross-Validation Accuracy:** ~97.6%
+- RBF SVM outperformed Linear SVM due to its ability to model non-linear boundaries.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+## 🛠️ Tools and Libraries Used
+
+- Python
+- Pandas, NumPy
+- Scikit-learn
+- Matplotlib
+- PCA (for visualization)
+- SVM (Support Vector Machine)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+## 📌 Conclusion
+
+This project shows the effectiveness of SVMs in medical diagnosis tasks like cancer classification. With proper preprocessing, feature scaling, and hyperparameter tuning, **high accuracy and robust performance** can be achieved even on complex datasets.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
